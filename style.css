@@ -1,0 +1,25 @@
+body {
+    background-color: rgba(125, 25, 132, .28);
+}
+.text {
+    border: 2px solid black;
+    margin: auto auto 3.6vh auto;
+    width: 200px;
+    text-align: center;
+    padding: .5vh;
+    background-color: rgba(173, 54, 12, .3);
+}
+#container {
+    background-color: white;
+    display: grid;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border: 2px solid black;
+    width: 70vh;
+    height: 70vh;
+    margin: auto;
+}
+.colored {
+    background-color: red;
+}
