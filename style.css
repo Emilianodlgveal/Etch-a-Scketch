@@ -23,3 +23,17 @@ body {
 .colored {
     background-color: red;
 }
+#sizeOfGrid {
+    width: 15vh;
+    height: 5vh;
+}
+
+#colors {
+    width: 15vh;
+    height: 5vh;
+}
+
+#reset {
+    width: 15vh;
+    height: 5vh;
+}

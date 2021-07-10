@@ -1,7 +1,8 @@
 const container = document.querySelector('#container');
 const sizetOfGrid = document.querySelector('#sizeOfGrid');
 const colorOfBackground = document.querySelector('select');
-const btn = document.querySelector('button');
+const btn = document.querySelector('#reset');
+
 
 sizeOfGrid.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
@@ -32,15 +33,16 @@ sizeOfGrid.addEventListener('keypress', (e) => {
                 case (colorOfBackground.value === 'yellow'):
                     e.target.style.backgroundColor = 'yellow';
                     break;
+                case (colorOfBackground.value === 'pink'):
+                    e.target.style.backgroundColor = 'pink';
+                    break;
             }
         }
         
         const littleSquares = document.querySelectorAll('.littleSquare');
         littleSquares.forEach(littleSquare => littleSquare.addEventListener('mouseenter', changeBackground));
     
-        btn.addEventListener('click', (e) => {
-            e.target.style.backgroundColor = 'white';
-        })
+        
     } else {
         for (i = 0; i < 64*64; i++) {
             try{
@@ -50,5 +52,13 @@ sizeOfGrid.addEventListener('keypress', (e) => {
                 return;
             }
         }
-    }
+    };
+    
+})
+
+btn.addEventListener('click', (e) => {
+    let container = document.getElementById('container');
+        while (container.firstChild) {
+            container.removeChild(container.firstChild)
+        }
 })
