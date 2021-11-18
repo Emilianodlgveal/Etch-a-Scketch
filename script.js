@@ -6,7 +6,7 @@ const btn = document.querySelector('#reset');
 
 sizeOfGrid.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
-        if (Number(e.target.value) >= 1 && Number(e.target.value <= 64)) {
+        if (Number(e.target.value) >= 1 && Number(e.target.value <= 128)) {
         container.setAttribute('style', `grid-template-columns: repeat(${Number(e.target.value)}, 1fr); grid-template-rows: repeat(${Number(e.target.value)}, 1fr)`);
         } else {
             alert('values need to be between 1 to 64');
